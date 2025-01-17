@@ -1,0 +1,4 @@
+package-lock.json
+*.sh
+node_modules/
+.DS_Store

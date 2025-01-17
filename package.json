@@ -1,0 +1,17 @@
+{
+  "name": "live2d-api-mygo",
+  "version": "0.0.1",
+  "description": "Live2D API for web pages feat. MyGO!!!!!",
+  "private": true,
+  "scripts": {
+    "build": "rollup -c rollup.config.js -f iife | terser -c -m > waifu-tips.js",
+    "build-dev": "rollup -c rollup.config.js -f iife -o waifu-tips.js -w"
+  },
+  "devDependencies": {
+    "@fortawesome/fontawesome-free": "^6.2.0",
+    "@rollup/plugin-node-resolve": "^15.0.0",
+    "@rollup/pluginutils": "^5.0.1",
+    "rollup": "^3.2.3",
+    "terser": "^5.15.1"
+  }
+}
