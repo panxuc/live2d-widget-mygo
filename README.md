@@ -4,7 +4,9 @@
 
 该仓库中所有Live2D相关资源均来自于网络，仅供学习交流，请勿用于商业用途，如有侵权，请联系删除。
 
-## 前言
+[**点击查看示例网页**](https://live2d-api-mygo.panxuc.com/)。示例网页中模型位于左下角。
+
+## 声明
 
 - 本项目 API 搭建方式参考自 [nova1751/live2d-api](https://github.com/nova1751/live2d-api)。
   - 该项目 API 搭建方式参考自 [fghrsh/live2d_api](https://github.com/fghrsh/live2d_api)。
