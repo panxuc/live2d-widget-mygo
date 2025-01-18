@@ -1,11 +1,11 @@
-import { getModelId, setModelId, getModelTexturesId, setModelTexturesId, resetModelState } from "./config.js";
+import { getModelId, setModelId, getModelTexturesId, setModelTexturesId, getConfig, updateMessageArray } from "./config.js";
 import showMessage from "./message.js";
 import randomSelection from "./utils.js";
 
 class Model {
-    constructor(config) {
-        let { apiPath, cdnPath } = config;
-        this.cdnPath = cdnPath;
+    constructor() {
+        this.waifuPath = getConfig().waifuPath;
+        this.cdnPath = getConfig().cdnPath;
     }
 
     async loadModelList() {
@@ -27,6 +27,9 @@ class Model {
         showMessage(message, 4000, 10);
         const target = this.modelList.models[modelId][modelTexturesId];
         loadlive2d("live2d", `${this.cdnPath}model/${target}/index.json`);
+        fetch(this.waifuPath)
+            .then(response => response.json())
+            .then(updateMessageArray);
     }
 
     async loadOtherModel() {

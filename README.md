@@ -79,7 +79,7 @@
       <td><img src="assets/040_live_sr_01.png" alt="040_live_sr_01"><br lang="ja">守るのは、過去</td>
     </tr>
     <tr>
-      <td>live_event_235</td>
+      <td><img src="assets/banner_memorial_event235.png" alt="banner_memorial_event235"><br>live_event_235</td>
       <td><img src="assets/036_live_event_235_ur.png" alt="036_live_event_235_ur"><br lang="ja">心の叫び</td>
       <td><img src="assets/037_live_event_235_ur.png" alt="037_live_event_235_ur"><br lang="ja">迷いながら</td>
       <td><img src="assets/038_live_event_235_sr.png" alt="038_live_event_235_sr"><br lang="ja">気の向くままに</td>
@@ -87,7 +87,7 @@
       <td><img src="assets/040_live_event_235_sr.png" alt="040_live_event_235_sr"><br lang="ja">理想に届かない</td>
     </tr>
     <tr>
-      <td>live_event_240</td>
+      <td><img src="assets/banner_memorial_event240.png" alt="banner_memorial_event240"><br>live_event_240</td>
       <td><img src="assets/036_live_event_240_ssr.png" alt="036_live_event_240_ssr"><br lang="ja">立希ちゃんのとなりで</td>
       <td><img src="assets/037_live_event_240_sr.png" alt="037_live_event_240_sr"><br lang="ja">リーダー推薦</td>
       <td><img src="assets/038_live_event_240_ur.png" alt="038_live_event_240_ur"><br lang="ja">コインパーキングの猫</td>
@@ -95,7 +95,7 @@
       <td><img src="assets/040_live_event_240_ur.png" alt="040_live_event_240_ur"><br lang="ja">私と、取引しよう</td>
     </tr>
     <tr>
-      <td>live_event_250</td>
+      <td><img src="assets/banner_memorial_event250.png" alt="banner_memorial_event250"><br>live_event_250</td>
       <td><img src="assets/036_live_event_250_ur.png" alt="036_live_event_250_ur"><br lang="ja">運命の一枚</td>
       <td><img src="assets/037_live_event_250_r.png" alt="037_live_event_250_r"><br lang="ja">シックな花と</td>
       <td><img src="assets/038_live_event_250_sr.png" alt="038_live_event_250_sr"><br lang="ja">ひま。</td>
@@ -103,7 +103,7 @@
       <td><img src="assets/040_live_event_250_ssr.png" alt="040_live_event_250_ssr"><br lang="ja">買い出しよりも</td>
     </tr>
     <tr>
-      <td>live_event_253</td>
+      <td><img src="assets/banner_memorial_event253.png" alt="banner_memorial_event253"><br>live_event_253</td>
       <td></td>
       <td><img src="assets/037_live_event_253_ur.png" alt="037_live_event_253_ur"><br lang="ja">お花見の記念に！</td>
       <td></td>
@@ -111,7 +111,7 @@
       <td></td>
     </tr>
     <tr>
-      <td>live_event_277</td>
+      <td><img src="assets/banner_memorial_event277.png" alt="banner_memorial_event277"><br>live_event_277</td>
       <td></td>
       <td><img src="assets/037_live_event_277_sr.png" alt="037_live_event_277_sr"><br lang="ja">注文、いつもの</td>
       <td></td>
@@ -174,6 +174,6 @@
 
 ## TODO
 
-- [ ] 添加更多模型。
+- [x] 添加更多模型。
 - [ ] 添加更多文本。
 - [ ] 添加动作和表情。

@@ -1,11 +1,11 @@
-import { getModelId, setModelId, getModelTexturesId, setModelTexturesId, resetModelState } from "./config.js";
+import { getModelId, getModelTexturesId, resetModelState, getConfig, setConfig, getMessageArray } from "./config.js";
 import Model from "./model.js";
 import showMessage from "./message.js";
 import randomSelection from "./utils.js";
 import tools from "./tools.js";
 
-function loadWidget(config) {
-    const model = new Model(config);
+function loadWidget() {
+    const model = new Model();
     localStorage.removeItem("waifu-display");
     sessionStorage.removeItem("waifu-text");
     document.body.insertAdjacentHTML("beforeend", `<div id="waifu">
@@ -21,10 +21,10 @@ function loadWidget(config) {
     (function registerTools() {
         tools["switch-model"].callback = () => model.loadOtherModel();
         tools["switch-texture"].callback = () => model.loadOtherTextureModel();
-        if (!Array.isArray(config.tools)) {
-            config.tools = Object.keys(tools);
+        if (!Array.isArray(getConfig().tools)) {
+            getConfig().tools = Object.keys(tools);
         }
-        for (let tool of config.tools) {
+        for (let tool of getConfig().tools) {
             if (tools[tool]) {
                 const { icon, callback } = tools[tool];
                 document.getElementById("waifu-tool").insertAdjacentHTML("beforeend", `<span id="waifu-tool-${tool}">${icon}</span>`);
@@ -33,41 +33,32 @@ function loadWidget(config) {
         }
     })();
 
-    function welcomeMessage(time) {
-        if (location.pathname === "/") { // 如果是主页
-            for (let { hour, text } of time) {
-                const now = new Date(),
-                    after = hour.split("-")[0],
-                    before = hour.split("-")[1] || after;
-                if (after <= now.getHours() && now.getHours() <= before) {
-                    return text;
-                }
-            }
-        }
-        const text = `欢迎阅读<span>「${document.title.split(" - ")[0]}」</span>`;
-        let from;
-        if (document.referrer !== "") {
-            const referrer = new URL(document.referrer),
-                domain = referrer.hostname.split(".")[1];
-            const domains = {
-                "google": "Google",
-                "baidu": "百度",
-                "so": "360搜索",
-            };
-            if (location.hostname === referrer.hostname) return text;
+    // function welcomeMessage(time) {
+    // if (location.pathname === "/") { // 如果是主页
+    // }
+    // const text = `欢迎阅读<span>「${document.title.split(" - ")[0]}」</span>`;
+    // let from;
+    // if (document.referrer !== "") {
+    //     const referrer = new URL(document.referrer),
+    //         domain = referrer.hostname.split(".")[1];
+    //     const domains = {
+    //         "google": "Google",
+    //         "baidu": "百度",
+    //         "so": "360搜索",
+    //     };
+    //     if (location.hostname === referrer.hostname) return text;
 
-            if (domain in domains) from = domains[domain];
-            else from = referrer.hostname;
-            return `欢迎来自 <span>${from}</span> 的朋友<br>${text}`;
-        }
-        return text;
-    }
+    //     if (domain in domains) from = domains[domain];
+    //     else from = referrer.hostname;
+    //     return `欢迎来自 <span>${from}</span> 的朋友<br>${text}`;
+    // }
+    // return text;
+    // }
 
     function registerEventListener(result) {
         // 检测用户活动状态，并在空闲时显示消息
         let userAction = false,
             userActionTimer,
-            messageArray = result.message.default[getModelId()],
             lastHoverElement;
         window.addEventListener("mousemove", () => userAction = true);
         window.addEventListener("keydown", () => userAction = true);
@@ -78,12 +69,16 @@ function loadWidget(config) {
                 userActionTimer = null;
             } else if (!userActionTimer) {
                 userActionTimer = setInterval(() => {
-                    showMessage(messageArray, 6000, 9);
-                }, 20000);
+                    showMessage(getMessageArray(), 6000, 9);
+                }, 18000);
             }
         }, 1000);
         // showMessage(welcomeMessage(result.time), 7000, 11);
         window.addEventListener("mouseover", event => {
+            if (event.target.closest("#live2d")) {
+                showMessage(getMessageArray(), 4000, 8);
+                return;
+            }
             for (let { selector, text } of result.mouseover) {
                 if (!event.target.closest(selector)) continue;
                 if (lastHoverElement === selector) return;
@@ -95,7 +90,11 @@ function loadWidget(config) {
             }
         });
         window.addEventListener("click", event => {
-            for (let { selector, text } of result.click) {
+            if (event.target.closest("#live2d")) {
+                showMessage(getMessageArray(), 4000, 8);
+                return;
+            }
+            for (let { selector, text } of result.mouseover) {
                 if (!event.target.closest(selector)) continue;
                 text = randomSelection(text[getModelId()]);
                 text = text.replace("{text}", event.target.innerText);
@@ -103,22 +102,20 @@ function loadWidget(config) {
                 return;
             }
         });
-        result.seasons.forEach(({ date, text }) => {
-            const now = new Date(),
-                after = date.split("-")[0],
-                before = date.split("-")[1] || after;
-            if ((after.split("/")[0] <= now.getMonth() + 1 && now.getMonth() + 1 <= before.split("/")[0]) && (after.split("/")[1] <= now.getDate() && now.getDate() <= before.split("/")[1])) {
-                text = randomSelection(text[getModelId()]);
-                text = text.replace("{year}", now.getFullYear());
-                messageArray.push(text);
+
+        // const devtools = () => { };
+        // console.log("%c", devtools);
+        // devtools.toString = () => {
+        //     showMessage(result.message.console[getModelId()], 6000, 9);
+        // };
+        window.addEventListener("resize", () => {
+            let threshold = 160;
+            let widthDiff = Math.abs(window.outerWidth - window.innerWidth);
+            let heightDiff = Math.abs(window.outerHeight - window.innerHeight);
+            if (widthDiff > threshold || heightDiff > threshold) {
+                showMessage(result.message.console[getModelId()], 6000, 9);
             }
         });
-
-        const devtools = () => { };
-        console.log("%c", devtools);
-        devtools.toString = () => {
-            showMessage(result.message.console[getModelId()], 6000, 9);
-        };
         window.addEventListener("copy", () => {
             showMessage(result.message.copy[getModelId()], 6000, 9);
         });
@@ -133,19 +130,14 @@ function loadWidget(config) {
             resetModelState();
         }
         model.loadModel(getModelId(), getModelTexturesId());
-        fetch(config.waifuPath)
+        fetch(getConfig().waifuPath)
             .then(response => response.json())
             .then(registerEventListener);
     })();
 }
 
-function initWidget(config, apiPath) {
-    if (typeof config === "string") {
-        config = {
-            waifuPath: config,
-            apiPath
-        };
-    }
+function initWidget(config) {
+    setConfig(config);
     document.body.insertAdjacentHTML("beforeend", `<div id="waifu-toggle">
             <span>看板娘</span>
         </div>`);
@@ -153,7 +145,7 @@ function initWidget(config, apiPath) {
     toggle.addEventListener("click", () => {
         toggle.classList.remove("waifu-toggle-active");
         if (toggle.getAttribute("first-time")) {
-            loadWidget(config);
+            loadWidget();
             toggle.removeAttribute("first-time");
         } else {
             localStorage.removeItem("waifu-display");
@@ -169,7 +161,7 @@ function initWidget(config, apiPath) {
             toggle.classList.add("waifu-toggle-active");
         }, 0);
     } else {
-        loadWidget(config);
+        loadWidget();
     }
 }
 
