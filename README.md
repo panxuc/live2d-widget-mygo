@@ -155,15 +155,20 @@
 
 ## 使用
 
-使用 `jsdelivr` 引入。
+使用 `jsdelivr` 引入，只需 html 页面的 `head` 或 `body` 中添加一行代码即可：
 
 ```html
 <script src="https://cdn.jsdelivr.net/gh/panxuc/live2d-api-mygo@main/autoload.js"></script>
-<!-- 左下角 -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/panxuc/live2d-api-mygo@main/css/left.css"/>
-<!-- 右下角 -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/panxuc/live2d-api-mygo@main/css/right.css"/>
 ```
+
+默认情况下，只在浏览器宽度大于 768px 时显示模型，以防止模型对手机端网页阅读造成不便；模型默认显示在左下角。你也可以通过URL传递参数修改这个配置：
+
+```html
+<script src="https://cdn.jsdelivr.net/gh/panxuc/live2d-api-mygo@main/autoload.js?width_limit=0&position=right"></script>
+```
+
+- `width_limit`：宽度限制，单位为像素，当浏览器宽度大于此值时显示模型，默认为 768。
+- `position`：模型位置，可选值为 `left` 和 `right`，默认为 `left`。
 
 也可以下载 js 和 css 文件来进行自定义配置，详细请参考[live2d-widget配置](https://github.com/stevenjoezhang/live2d-widget#%E9%85%8D%E7%BD%AE-configuration)。
 

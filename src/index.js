@@ -8,11 +8,7 @@ function loadWidget() {
     const model = new Model();
     localStorage.removeItem("waifu-display");
     sessionStorage.removeItem("waifu-text");
-    document.body.insertAdjacentHTML("beforeend", `<div id="waifu">
-            <div id="waifu-tips"></div>
-            <canvas id="live2d" width="800" height="800"></canvas>
-            <div id="waifu-tool"></div>
-        </div>`);
+    document.body.insertAdjacentHTML("beforeend", `<div id="waifu"><div id="waifu-tips"></div><canvas id="live2d" width="800" height="800"></canvas><div id="waifu-tool"></div></div>`);
     // https://stackoverflow.com/questions/24148403/trigger-css-transition-on-appended-element
     setTimeout(() => {
         document.getElementById("waifu").style.bottom = 0;
@@ -76,7 +72,7 @@ function loadWidget() {
         // showMessage(welcomeMessage(result.time), 7000, 11);
         window.addEventListener("mouseover", event => {
             if (event.target.closest("#live2d")) {
-                showMessage(getMessageArray(), 4000, 8);
+                showMessage(getMessageArray(), 4000, 9);
                 return;
             }
             for (let { selector, text } of result.mouseover) {
@@ -85,20 +81,20 @@ function loadWidget() {
                 lastHoverElement = selector;
                 text = randomSelection(text[getModelId()]);
                 text = text.replace("{text}", event.target.innerText);
-                showMessage(text, 4000, 8);
+                showMessage(text, 4000, 10);
                 return;
             }
         });
         window.addEventListener("click", event => {
             if (event.target.closest("#live2d")) {
-                showMessage(getMessageArray(), 4000, 8);
+                showMessage(getMessageArray(), 4000, 9);
                 return;
             }
             for (let { selector, text } of result.mouseover) {
                 if (!event.target.closest(selector)) continue;
                 text = randomSelection(text[getModelId()]);
                 text = text.replace("{text}", event.target.innerText);
-                showMessage(text, 4000, 8);
+                showMessage(text, 4000, 10);
                 return;
             }
         });
@@ -138,9 +134,7 @@ function loadWidget() {
 
 function initWidget(config) {
     setConfig(config);
-    document.body.insertAdjacentHTML("beforeend", `<div id="waifu-toggle">
-            <span>看板娘</span>
-        </div>`);
+    document.body.insertAdjacentHTML("beforeend", `<div id="waifu-toggle"><span>看板娘</span></div>`);
     const toggle = document.getElementById("waifu-toggle");
     toggle.addEventListener("click", () => {
         toggle.classList.remove("waifu-toggle-active");
