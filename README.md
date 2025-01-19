@@ -1,18 +1,20 @@
 # Live2D API feat. MyGO!!!!!
 
-个人自用的 Live2D API，用于网页端引入 MyGO!!!!! 的 Live2D 模型。
+个人自用的Live2D API，用于在任意网页上引入MyGO!!!!!的Live2D模型。
 
 该仓库中所有Live2D相关资源均来自于网络，仅供学习交流，请勿用于商业用途，如有侵权，请联系删除。
 
 [**点击查看示例网页**](https://live2d-api-mygo.panxuc.com/)。示例网页中模型位于左下角。
 
-## 声明
+## 介绍
 
-- 本项目 API 搭建方式参考自 [nova1751/live2d-api](https://github.com/nova1751/live2d-api)。
-  - 该项目 API 搭建方式参考自 [fghrsh/live2d_api](https://github.com/fghrsh/live2d_api)。
-  - 该项目代码参考自 [stevenjoezhang/live2d-widget](https://github.com/stevenjoezhang/live2d-widget)。
-  - 该项目模型来自 [Eikanya/Live2d-model](https://github.com/Eikanya/Live2d-model)，仅供学习交流，请勿用于商业用途，如有侵权，请联系删除。
-- 本项目模型来自 [Bestdori](https://bestdori.com/) 提供的《BanG Dream! 少女乐团派对》游戏数据包资源。为了适配此项目，对 Live2D 模型进行了一些必要的修改。仅供学习交流，请勿用于商业用途，如有侵权，请联系删除。
+- 本项目API搭建方式参考自[nova1751/live2d-api](https://github.com/nova1751/live2d-api)。
+  - 该项目API搭建方式参考自[fghrsh/live2d_api](https://github.com/fghrsh/live2d_api)。
+  - 该项目代码参考自[stevenjoezhang/live2d-widget](https://github.com/stevenjoezhang/live2d-widget)。
+  - 该项目模型来自[Eikanya/Live2d-model](https://github.com/Eikanya/Live2d-model)，仅供学习交流，请勿用于商业用途，如有侵权，请联系删除。
+- 本项目使用[PixiJS](https://github.com/pixijs/pixijs)重写了Live2D渲染部分。Live2D部分使用[pixi-live2d-display](https://github.com/guansss/pixi-live2d-display)进行渲染。
+- 本项目模型来自[Bestdori](https://bestdori.com/) 提供的《BanG Dream! 少女乐团派对》游戏数据包资源。为了适配此项目，对Live2D模型进行了一些必要的修改。仅供学习交流，请勿用于商业用途，如有侵权，请联系删除。
+- 本项目完全移除了[stevenjoezhang/live2d-widget](https://github.com/stevenjoezhang/live2d-widget)中的下头文本，为每位角色设计了单独的一套台词，大多数出自动画台词和游戏日常对话。
 
 ## 模型
 
@@ -172,13 +174,8 @@
 
 也可以下载 js 和 css 文件来进行自定义配置，详细请参考[live2d-widget配置](https://github.com/stevenjoezhang/live2d-widget#%E9%85%8D%E7%BD%AE-configuration)。
 
-## 成果
-
-1. 完全移除了[stevenjoezhang/live2d-widget](https://github.com/stevenjoezhang/live2d-widget)中的下头文本。
-2. 为每个人设计了自己的一套文本，不再使用通用文本。
-
 ## TODO
 
 - [x] 添加更多模型。
-- [ ] 添加更多文本。
+- [x] 添加更多文本。
 - [ ] 添加动作和表情。

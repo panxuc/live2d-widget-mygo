@@ -687,19 +687,19 @@
       "selector": ".feed-link a",
       "text": [
         [
-          "要使用 RSS 订阅吗？"
+          "要使用RSS订阅吗？"
         ],
         [
-          "要使用 RSS 订阅吗？"
+          "要使用RSS订阅吗？"
         ],
         [
-          "要使用 RSS 订阅吗？"
+          "要使用RSS订阅吗？"
         ],
         [
-          "要使用 RSS 订阅吗？"
+          "要使用RSS订阅吗？"
         ],
         [
-          "要使用 RSS 订阅吗？"
+          "要使用RSS订阅吗？"
         ]
       ]
     },
@@ -707,20 +707,20 @@
       "selector": ".cc-opacity, .post-copyright-author",
       "text": [
         [
-          "所有文章均采用 CC BY-NC-SA 4.0 许可协议，要注意版权呢……",
-          "我要不要把我的诗也采用 CC BY-NC-SA 4.0 许可协议发布呢……"
+          "所有文章均采用CC BY-SA 4.0许可协议，要注意版权呢……",
+          "我要不要把我的诗也采用CC BY-SA 4.0许可协议发布呢……"
         ],
         [
-          "所有文章均采用 CC BY-NC-SA 4.0 许可协议，要注意版权哦！"
+          "所有文章均采用CC BY-SA 4.0许可协议，要注意版权哦！"
         ],
         [
-          "「所有文章均采用 CC BY-NC-SA 4.0 许可协议」……？看不太懂。"
+          "「所有文章均采用CC BY-SA 4.0许可协议」……？看不太懂。"
         ],
         [
-          "所有文章均采用 CC BY-NC-SA 4.0 许可协议，要注意版权呢。"
+          "所有文章均采用CC BY-SA 4.0许可协议，要注意版权呢。"
         ],
         [
-          "所有文章均采用 CC BY-NC-SA 4.0 许可协议，不要剽窃他人的创作哦。"
+          "所有文章均采用CC BY-SA 4.0许可协议，不要剽窃他人的创作哦。"
         ]
       ]
     },
@@ -811,16 +811,16 @@
           "GitHub？感觉很酷的样子……"
         ],
         [
-          "呐呐，爽世世，GitHub 据说是全球最大的交友网站哦！"
+          "呐呐，爽世世，GitHub据说是全球最大的交友网站哦！"
         ],
         [
           "GitHub？是什么？"
         ],
         [
-          "GitHub 上面托管了许多有趣的项目呢。"
+          "GitHub上面托管了许多有趣的项目呢。"
         ],
         [
-          "GitHub 啊。我偶尔会用托管在上面的项目。"
+          "GitHub啊。我偶尔会用托管在上面的项目。"
         ]
       ]
     },
@@ -848,19 +848,19 @@
       "selector": "a[href^='/tags/']",
       "text": [
         [
-          "要看看 <span>{text}</span> 标签吗？"
+          "要看看<span>{text}</span>标签吗？"
         ],
         [
-          "要看看 <span>{text}</span> 标签吗？"
+          "要看看<span>{text}</span>标签吗？"
         ],
         [
-          "要看看 <span>{text}</span> 标签吗？"
+          "要看看<span>{text}</span>标签吗？"
         ],
         [
-          "要看看 <span>{text}</span> 标签吗？"
+          "要看看<span>{text}</span>标签吗？"
         ],
         [
-          "要看看 <span>{text}</span> 标签吗？"
+          "要看看<span>{text}</span>标签吗？"
         ]
       ]
     },
@@ -868,19 +868,19 @@
       "selector": "a[href^='/categories/']",
       "text": [
         [
-          "要看看 <span>{text}</span> 分类吗？"
+          "要看看<span>{text}</span>分类吗？"
         ],
         [
-          "要看看 <span>{text}</span> 分类吗？"
+          "要看看<span>{text}</span>分类吗？"
         ],
         [
-          "要看看 <span>{text}</span> 分类吗？"
+          "要看看<span>{text}</span>分类吗？"
         ],
         [
-          "要看看 <span>{text}</span> 分类吗？"
+          "要看看<span>{text}</span>分类吗？"
         ],
         [
-          "要看看 <span>{text}</span> 分类吗？"
+          "要看看<span>{text}</span>分类吗？"
         ]
       ]
     },
@@ -888,19 +888,19 @@
       "selector": ".post-title-link",
       "text": [
         [
-          "要看看 <span>{text}</span> 这篇文章吗？"
+          "要看看<span>{text}</span>这篇文章吗？"
         ],
         [
-          "要看看 <span>{text}</span> 这篇文章吗？"
+          "要看看<span>{text}</span>这篇文章吗？"
         ],
         [
-          "要看看 <span>{text}</span> 这篇文章吗？"
+          "要看看<span>{text}</span>这篇文章吗？"
         ],
         [
-          "要看看 <span>{text}</span> 这篇文章吗？"
+          "要看看<span>{text}</span>这篇文章吗？"
         ],
         [
-          "要看看 <span>{text}</span> 这篇文章吗？"
+          "要看看<span>{text}</span>这篇文章吗？"
         ]
       ]
     },
@@ -968,19 +968,19 @@
       "selector": ".container a[href^='http'], .nav-link .nav-text",
       "text": [
         [
-          "要看看 <span>{text}</span> 吗？"
+          "要看看<span>{text}</span>吗？"
         ],
         [
-          "要看看 <span>{text}</span> 吗？"
+          "要看看<span>{text}</span>吗？"
         ],
         [
-          "要看看 <span>{text}</span> 吗？"
+          "要看看<span>{text}</span>吗？"
         ],
         [
-          "要看看 <span>{text}</span> 吗？"
+          "要看看<span>{text}</span>吗？"
         ],
         [
-          "要看看 <span>{text}</span> 吗？"
+          "要看看<span>{text}</span>吗？"
         ]
       ]
     },
@@ -1008,16 +1008,16 @@
       "selector": ".reward-container",
       "text": [
         [
-          "每次 Live 之后，都能收到很多点赞呢……"
+          "每次Live之后，都能收到很多点赞呢……"
         ],
         [
-          "最近发在 MyGO!!!!! 的账号上的动态，总是有许多点赞呢。"
+          "最近发在MyGO!!!!!的账号上的动态，总是有许多点赞呢。"
         ],
         [
           "赞，点一下。"
         ],
         [
-          "最近 MyGO!!!!! 的账号运营得真好啊……有许多点赞呢。"
+          "最近MyGO!!!!!的账号运营得真好啊……有许多点赞呢。"
         ],
         [
           "你这家伙，竟敢不给灯点赞！"
@@ -1168,19 +1168,19 @@
       "selector": ".need-share-button_qqzone",
       "text": [
         [
-          "要分享到 QQ 空间吗？"
+          "要分享到QQ空间吗？"
         ],
         [
-          "要分享到 QQ 空间吗？"
+          "要分享到QQ空间吗？"
         ],
         [
-          "要分享到 QQ 空间吗？"
+          "要分享到QQ空间吗？"
         ],
         [
-          "要分享到 QQ 空间吗？"
+          "要分享到QQ空间吗？"
         ],
         [
-          "要分享到 QQ 空间吗？"
+          "要分享到QQ空间吗？"
         ]
       ]
     },
@@ -1188,19 +1188,19 @@
       "selector": ".need-share-button_twitter",
       "text": [
         [
-          "X 上面好像有很多人在画关于我们的画。"
+          "X上面好像有很多人在画关于我们的画。"
         ],
         [
-          "诶？Ave Mujica 上 X 热榜了！MyGO!!!!! 什么时候也能这样呢？"
+          "诶？Ave Mujica上X热榜了！MyGO!!!!!什么时候也能这样呢？"
         ],
         [
-          "X？可以开 Live 吗？"
+          "X？可以开Live吗？"
         ],
         [
-          "其实我在 X 上有很多账号呢。"
+          "其实我在X上有很多账号呢。"
         ],
         [
-          "灯！看 X 的时候一定要注意，不要看不好的东西。"
+          "灯！看X的时候一定要注意，不要看不好的东西。"
         ]
       ]
     },
@@ -1208,19 +1208,19 @@
       "selector": ".need-share-button_facebook",
       "text": [
         [
-          "Facebook 上好像也有关于我们的信息呢……我看看……"
+          "Facebook上好像也有关于我们的信息呢……我看看……"
         ],
         [
-          "Facebook 上有个叫「武士道迷因」的漫画，感觉很有趣呢！"
+          "Facebook上有个叫「武士道迷因」的漫画，感觉很有趣呢！"
         ],
         [
           "Facebook？不知道。"
         ],
         [
-          "其实我在 Facebook 上也有很多账号呢。"
+          "其实我在Facebook上也有很多账号呢。"
         ],
         [
-          "要看看 Facebook 吗？"
+          "要看看Facebook吗？"
         ]
       ]
     },
@@ -1388,19 +1388,19 @@
       "selector": ".vcontrol a",
       "text": [
         [
-          "Markdown 好厉害……几个字符就能写出复杂的格式……"
+          "Markdown好厉害……几个字符就能写出复杂的格式……"
         ],
         [
-          "其实我能够熟练使用 Markdown 哦！"
+          "其实我能够熟练使用Markdown哦！"
         ],
         [
           "Markdown？什么意思？"
         ],
         [
-          "感觉现在这个时代，Markdown 成了上网必会技能了呢……"
+          "感觉现在这个时代，Markdown成了上网必会技能了呢……"
         ],
         [
-          "Markdown 写起来很便利，我挺喜欢的。"
+          "Markdown写起来很便利，我挺喜欢的。"
         ]
       ]
     },
@@ -1408,7 +1408,7 @@
       "selector": ".vemoji-btn",
       "text": [
         [
-          "网上有很多人喜欢用 MyGO!!!!! 的表情呢……"
+          "网上有很多人喜欢用MyGO!!!!!的表情呢……"
         ],
         [
           "网上有很多人喜欢用关于我的表情哦！感觉就像大明星一样！"
@@ -1471,7 +1471,7 @@
           "大家内心的呐喊，传达到了……"
         ],
         [
-          "MyGO!!!!! 的评论区，总是有许多有趣的内容呢。"
+          "MyGO!!!!!的评论区，总是有许多有趣的内容呢。"
         ],
         [
           "有趣的评论。"

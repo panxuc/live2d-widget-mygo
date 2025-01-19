@@ -1,4 +1,3 @@
-import { getModelId, setModelId, getModelTexturesId, setModelTexturesId, resetModelState } from "./config.js";
 import fa_comment from "@fortawesome/fontawesome-free/svgs/solid/comment.svg";
 import fa_user_circle from "@fortawesome/fontawesome-free/svgs/solid/circle-user.svg";
 import fa_street_view from "@fortawesome/fontawesome-free/svgs/solid/street-view.svg";
@@ -55,7 +54,7 @@ const tools = {
             // showMessage("愿你有一天能与重要的人重逢。", 2000, 11);
             document.getElementById("waifu").style.bottom = "-500px";
             setTimeout(() => {
-                document.getElementById("waifu").style.display = "none";
+                // document.getElementById("waifu").style.display = "none";
                 document.getElementById("waifu-toggle").classList.add("waifu-toggle-active");
             }, 3000);
         }

@@ -1,18 +1,20 @@
+import * as PIXI from "pixi.js";
 import { getModelId, getModelTexturesId, resetModelState, getConfig, setConfig, getMessageArray } from "./config.js";
 import Model from "./model.js";
 import showMessage from "./message.js";
 import randomSelection from "./utils.js";
 import tools from "./tools.js";
 
+window.PIXI = PIXI;
+
 function loadWidget() {
+    document.body.insertAdjacentHTML("beforeend", `<div id="waifu"><div id="waifu-tips"></div><canvas id="live2d" width="800" height="800"></canvas><div id="waifu-tool"></div></div>`);
     const model = new Model();
     localStorage.removeItem("waifu-display");
     sessionStorage.removeItem("waifu-text");
-    document.body.insertAdjacentHTML("beforeend", `<div id="waifu"><div id="waifu-tips"></div><canvas id="live2d" width="800" height="800"></canvas><div id="waifu-tool"></div></div>`);
-    // https://stackoverflow.com/questions/24148403/trigger-css-transition-on-appended-element
-    setTimeout(() => {
-        document.getElementById("waifu").style.bottom = 0;
-    }, 0);
+    // setTimeout(() => {
+    //     document.getElementById("waifu").style.bottom = 0;
+    // }, 0);
 
     (function registerTools() {
         tools["switch-model"].callback = () => model.loadOtherModel();
@@ -23,7 +25,7 @@ function loadWidget() {
         for (let tool of getConfig().tools) {
             if (tools[tool]) {
                 const { icon, callback } = tools[tool];
-                document.getElementById("waifu-tool").insertAdjacentHTML("beforeend", `<span id="waifu-tool-${tool}">${icon}</span>`);
+                document.getElementById("waifu-tool").insertAdjacentHTML("beforeend", `<span id="waifu-tool-${tool}">${decodeURIComponent(icon).replace('data:image/svg+xml,', '')}</span>`);
                 document.getElementById(`waifu-tool-${tool}`).addEventListener("click", callback);
             }
         }
@@ -134,7 +136,7 @@ function loadWidget() {
 
 function initWidget(config) {
     setConfig(config);
-    document.body.insertAdjacentHTML("beforeend", `<div id="waifu-toggle"><span>看板娘</span></div>`);
+    document.body.insertAdjacentHTML("beforeend", `<div id="waifu-toggle"><span>Live2D</span></div>`);
     const toggle = document.getElementById("waifu-toggle");
     toggle.addEventListener("click", () => {
         toggle.classList.remove("waifu-toggle-active");

@@ -1,17 +1,22 @@
 {
   "name": "live2d-api-mygo",
-  "version": "0.0.1",
-  "description": "Live2D API for web pages feat. MyGO!!!!!",
+  "version": "0.1.0",
   "private": true,
+  "type": "module",
   "scripts": {
-    "build": "rollup -c rollup.config.js -f iife | terser -c -m > waifu-tips.js",
-    "build-dev": "rollup -c rollup.config.js -f iife -o waifu-tips.js -w"
+    "start": "npm run dev",
+    "build": "vite build",
+    "dev": "vite"
+  },
+  "dependencies": {
+    "pixi-live2d-display": "^0.4.0",
+    "pixi.js": "^6.5.2"
   },
   "devDependencies": {
     "@fortawesome/fontawesome-free": "^6.2.0",
-    "@rollup/plugin-node-resolve": "^16.0.0",
-    "@rollup/pluginutils": "^5.0.1",
-    "rollup": "^4.30.1",
-    "terser": "^5.15.1"
+    "@eslint/js": "^9.16.0",
+    "eslint": "^9.16.0",
+    "typescript": "~5.7.2",
+    "vite": "^6.0.2"
   }
 }
