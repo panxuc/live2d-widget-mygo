@@ -5,10 +5,15 @@ export default defineConfig({
     rollupOptions: {
       input: {
         main: 'src/waifu-tips.js',
+        autoload: 'src/autoload.js',
       },
       output: {
         dir: '.',
-        entryFileNames: 'waifu-tips.js',
+        entryFileNames: (chunkInfo) => {
+          return chunkInfo.name === 'main' ? 'waifu-tips.js' :
+            chunkInfo.name === 'autoload' ? 'autoload.js' :
+              '[name].js';
+        },
       },
     },
   },

@@ -15,6 +15,13 @@
 - 本项目使用[PixiJS](https://github.com/pixijs/pixijs)重写了Live2D渲染部分。Live2D部分使用[pixi-live2d-display](https://github.com/guansss/pixi-live2d-display)进行渲染。
 - 本项目模型来自[Bestdori](https://bestdori.com/)提供的《BanG Dream! 少女乐团派对》游戏数据包资源。为了适配此项目，对Live2D模型进行了一些必要的修改。仅供学习交流，请勿用于商业用途，如有侵权，请联系删除。
 - 本项目完全移除了[stevenjoezhang/live2d-widget](https://github.com/stevenjoezhang/live2d-widget)中的下头文本，为每位角色设计了单独的一套台词，大多数出自动画台词和游戏日常对话。
+- 由于匹配文本和动作、表情太麻烦了，文本量还很大，所以暂时在每次说话时随机选择动作和表情。
+
+## TODO
+
+- [x] 添加更多模型。
+- [x] 添加更多文本。
+- [ ] 添加动作和表情。
 
 ## 模型
 
@@ -160,22 +167,17 @@
 使用`jsdelivr`引入，只需在html页面的`head`或`body`中添加一行代码即可：
 
 ```html
-<script src="https://cdn.jsdelivr.net/gh/panxuc/live2d-api-mygo@v0.1.0/autoload.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/panxuc/live2d-api-mygo@v0.1.1/autoload.js"></script>
 ```
 
 默认情况下，只在浏览器宽度大于768px时显示模型，以防止模型对手机端网页阅读造成不便；模型默认显示在左下角。你也可以通过URL传递参数修改这个配置：
 
 ```html
-<script src="https://cdn.jsdelivr.net/gh/panxuc/live2d-api-mygo@v0.1.0/autoload.js?width_limit=0&position=right"></script>
+<script src="https://cdn.jsdelivr.net/gh/panxuc/live2d-api-mygo@v0.1.1/autoload.js?width_limit=0&position=right&preload=ALL"></script>
 ```
 
 - `width_limit`：宽度限制，单位为像素，当浏览器宽度大于此值时显示模型，默认为768。
 - `position`：模型位置，可选值为`left`和`right`，默认为`left`。
+- `preload`：是否预加载模型的表情和动作，可选值为`ALL`（预加载全部表情和动作，可能导致加载新模型时网络阻塞，但动作切换较为流畅）、`IDLE`（只预加载默认表情和动作，需要时加载其他表情和动作）和`NONE`（不预加载任何表情和动作，需要时加载其他表情和动作），默认为`IDLE`。
 
 也可以下载js和css文件来进行自定义配置，详细请参考[live2d-widget配置](https://github.com/stevenjoezhang/live2d-widget#%E9%85%8D%E7%BD%AE-configuration)。
-
-## TODO
-
-- [x] 添加更多模型。
-- [x] 添加更多文本。
-- [ ] 添加动作和表情。

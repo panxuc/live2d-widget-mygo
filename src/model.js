@@ -42,7 +42,7 @@ class Model {
         this.modelMotions = Object.keys(this.modelIndex.motions);
         this.modelExpressions = this.modelIndex.expressions.map(expression => expression.name);
         this.app.stage.removeChildren();
-        this.model = await Live2DModel.from(this.modelIndex);
+        this.model = await Live2DModel.from(this.modelIndex, { motionPreload: getConfig().preload });
         this.app.stage.addChild(this.model);
         this.model.scale.set(0.33);
         fetch(this.waifuPath)

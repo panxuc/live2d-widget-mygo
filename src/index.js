@@ -12,9 +12,9 @@ function loadWidget() {
     const model = new Model();
     localStorage.removeItem("waifu-display");
     sessionStorage.removeItem("waifu-text");
-    // setTimeout(() => {
-    //     document.getElementById("waifu").style.bottom = 0;
-    // }, 0);
+    setTimeout(() => {
+        document.getElementById("waifu").style.bottom = "-100px";
+    }, 0);
 
     (function registerTools() {
         tools["switch-model"].callback = () => model.loadOtherModel();
@@ -142,7 +142,7 @@ function initWidget(config) {
             localStorage.removeItem("waifu-display");
             document.getElementById("waifu").style.display = "";
             setTimeout(() => {
-                document.getElementById("waifu").style.bottom = 0;
+                document.getElementById("waifu").style.bottom = "-100px";
             }, 0);
         }
     });
