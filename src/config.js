@@ -3,9 +3,6 @@ let modelTexturesId = parseInt(localStorage.getItem("modelTexturesId") || "0", 1
 let config = {};
 let messageArray = [];
 
-console.log("modelId", modelId);
-console.log("modelTexturesId", modelTexturesId);
-
 export function getModelId() {
     if (modelId === null | modelId === undefined | modelId === NaN) {
         resetModelState();

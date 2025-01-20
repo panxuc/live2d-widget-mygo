@@ -8,7 +8,7 @@ import tools from "./tools.js";
 window.PIXI = PIXI;
 
 function loadWidget() {
-    document.body.insertAdjacentHTML("beforeend", `<div id="waifu"><div id="waifu-tips"></div><canvas id="live2d" width="800" height="800"></canvas><div id="waifu-tool"></div></div>`);
+    document.body.insertAdjacentHTML("beforeend", `<div id="waifu"><canvas id="live2d" width="800" height="800"></canvas><div id="waifu-tips"></div><div id="waifu-tool"></div></div>`);
     const model = new Model();
     localStorage.removeItem("waifu-display");
     sessionStorage.removeItem("waifu-text");
@@ -67,14 +67,14 @@ function loadWidget() {
                 userActionTimer = null;
             } else if (!userActionTimer) {
                 userActionTimer = setInterval(() => {
-                    showMessage(getMessageArray(), 6000, 9);
+                    showMessage(model, getMessageArray(), 6000, 9);
                 }, 18000);
             }
         }, 1000);
-        // showMessage(welcomeMessage(result.time), 7000, 11);
+        // showMessage(model, welcomeMessage(result.time), 7000, 11);
         window.addEventListener("mouseover", event => {
             if (event.target.closest("#live2d")) {
-                showMessage(getMessageArray(), 4000, 9);
+                showMessage(model, getMessageArray(), 4000, 9);
                 return;
             }
             for (let { selector, text } of result.mouseover) {
@@ -83,42 +83,37 @@ function loadWidget() {
                 lastHoverElement = selector;
                 text = randomSelection(text[getModelId()]);
                 text = text.replace("{text}", event.target.innerText);
-                showMessage(text, 4000, 10);
+                showMessage(model, text, 4000, 10);
                 return;
             }
         });
         window.addEventListener("click", event => {
             if (event.target.closest("#live2d")) {
-                showMessage(getMessageArray(), 4000, 9);
+                showMessage(model, getMessageArray(), 4000, 9);
                 return;
             }
             for (let { selector, text } of result.mouseover) {
                 if (!event.target.closest(selector)) continue;
                 text = randomSelection(text[getModelId()]);
                 text = text.replace("{text}", event.target.innerText);
-                showMessage(text, 4000, 10);
+                showMessage(model, text, 4000, 10);
                 return;
             }
         });
 
-        // const devtools = () => { };
-        // console.log("%c", devtools);
-        // devtools.toString = () => {
-        //     showMessage(result.message.console[getModelId()], 6000, 9);
-        // };
         window.addEventListener("resize", () => {
             let threshold = 160;
             let widthDiff = Math.abs(window.outerWidth - window.innerWidth);
             let heightDiff = Math.abs(window.outerHeight - window.innerHeight);
             if (widthDiff > threshold || heightDiff > threshold) {
-                showMessage(result.message.console[getModelId()], 6000, 9);
+                showMessage(model, result.message.console[getModelId()], 6000, 9);
             }
         });
         window.addEventListener("copy", () => {
-            showMessage(result.message.copy[getModelId()], 6000, 9);
+            showMessage(model, result.message.copy[getModelId()], 6000, 9);
         });
         window.addEventListener("visibilitychange", () => {
-            if (!document.hidden) showMessage(result.message.visibilitychange[getModelId()], 6000, 9);
+            if (!document.hidden) showMessage(model, result.message.visibilitychange[getModelId()], 6000, 9);
         });
     }
 

@@ -39,17 +39,16 @@
 
 #waifu-tips {
   animation: shake 50s ease-in-out 5s infinite;
-  background-color: linear-gradient(rgba(245, 247, 250, 1) 0%, rgba(189, 198, 222, 1) 100%);
-  border: 1px solid rgba(11, 52, 110, 1);
-  border-radius: 12px;
-  box-shadow: 3px 3px 10px rgba(100, 100, 100, 0.5);
+  background-color: rgba(255, 255, 255, 0.85);
+  border-radius: 9px;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 3px 3px;
   font-size: 14px;
   line-height: 24px;
   margin: -30px 30px;
-  min-height: 75px;
+  min-height: 86px;
   opacity: 0;
   overflow: hidden;
-  padding: 5px 5px;
+  padding: 8px 8px;
   position: absolute;
   text-overflow: ellipsis;
   transition: opacity 1s;
@@ -57,6 +56,7 @@
   word-break: break-all;
   top: 0px;
   left: 20px;
+  pointer-events: none;
 }
 
 #waifu-tips.waifu-tips-active {

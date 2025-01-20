@@ -15,7 +15,6 @@ class Model {
             height: 800,
             backgroundAlpha: 0,
         });
-        this.model = null;
     }
 
     async loadModelList() {
@@ -33,12 +32,17 @@ class Model {
         }
         localStorage.setItem("modelId", modelId);
         localStorage.setItem("modelTexturesId", modelTexturesId);
-        console.log(`Live2D 模型 ${modelId}-${modelTexturesId} 开始加载`);
-        showMessage(message, 4000, 10);
+        console.log(`Live2D Model ${modelId}-${modelTexturesId}`);
+        showMessage(this, message, 4000, 10);
         const target = this.modelList.models[modelId][modelTexturesId];
         // loadlive2d("live2d", `${this.cdnPath}model/${target}/index.json`);
-        this.model = await Live2DModel.from(`${this.cdnPath}model/${target}/index.json`);
+        let url = `${this.cdnPath}model/${target}/index.json`;
+        this.modelIndex = await fetch(url).then(response => response.json());
+        this.modelIndex.url = url;
+        this.modelMotions = Object.keys(this.modelIndex.motions);
+        this.modelExpressions = this.modelIndex.expressions.map(expression => expression.name);
         this.app.stage.removeChildren();
+        this.model = await Live2DModel.from(this.modelIndex);
         this.app.stage.addChild(this.model);
         this.model.scale.set(0.33);
         fetch(this.waifuPath)

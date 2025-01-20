@@ -2,7 +2,7 @@ import randomSelection from "./utils.js";
 
 let messageTimer;
 
-function showMessage(text, timeout, priority) {
+function showMessage(model, text, timeout, priority) {
     if (!text || (sessionStorage.getItem("waifu-text") && sessionStorage.getItem("waifu-text") > priority)) return;
     if (messageTimer) {
         clearTimeout(messageTimer);
@@ -17,6 +17,8 @@ function showMessage(text, timeout, priority) {
         sessionStorage.removeItem("waifu-text");
         tips.classList.remove("waifu-tips-active");
     }, timeout);
+    model.model.motion(randomSelection(model.modelMotions));
+    model.model.expression(randomSelection(model.modelExpressions));
 }
 
 export default showMessage;

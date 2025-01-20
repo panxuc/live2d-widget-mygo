@@ -1,5 +1,5 @@
 // 注意：live2d_path 参数应使用绝对路径
-const live2d_path = "https://cdn.jsdelivr.net/gh/panxuc/live2d-api-mygo@main/";
+const live2d_path = "https://cdn.jsdelivr.net/gh/panxuc/live2d-api-mygo@v0.1.0/";
 
 // const live2d_path = 'http://localhost:11451/';
 
@@ -10,7 +10,6 @@ const live2dConfig = {
   width_limit: params.get('width_limit') || 768,
   position: params.get('position') || 'left',
 };
-console.log('live2dConfig', live2dConfig);
 
 // 封装异步加载资源的方法
 function loadExternalResource(url, type) {
