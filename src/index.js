@@ -82,7 +82,7 @@ function loadWidget() {
                 if (lastHoverElement === selector) return;
                 lastHoverElement = selector;
                 text = randomSelection(text[getModelId()]);
-                text = text.replace("{text}", event.target.innerText);
+                // text = text.replace("{text}", event.target.innerText);
                 showMessage(model, text, 4000, 10);
                 return;
             }
@@ -95,7 +95,7 @@ function loadWidget() {
             for (let { selector, text } of result.mouseover) {
                 if (!event.target.closest(selector)) continue;
                 text = randomSelection(text[getModelId()]);
-                text = text.replace("{text}", event.target.innerText);
+                // text = text.replace("{text}", event.target.innerText);
                 showMessage(model, text, 4000, 10);
                 return;
             }

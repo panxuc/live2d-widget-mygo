@@ -1,5 +1,5 @@
 // 注意：live2d_path 参数应使用绝对路径
-const live2d_path = "https://cdn.jsdelivr.net/gh/panxuc/live2d-api-mygo@v0.1.1/";
+const live2d_path = "https://cdn.jsdelivr.net/gh/panxuc/live2d-api-mygo@v0.1.2/";
 
 // const live2d_path = 'http://localhost:11451/';
 
