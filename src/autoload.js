@@ -1,10 +1,6 @@
-// 注意：live2d_path 参数应使用绝对路径
-const live2d_path = "https://cdn.jsdelivr.net/gh/panxuc/live2d-api-mygo@v0.1.2/";
-
-// const live2d_path = 'http://localhost:11451/';
-
 // 加载 URL 参数
 const currentScriptSrc = document.currentScript.src;
+const live2d_path = currentScriptSrc.substring(0, currentScriptSrc.lastIndexOf('/') + 1);
 const params = new URL(currentScriptSrc).searchParams;
 const live2dConfig = {
   width_limit: params.get('width_limit') || 768,
