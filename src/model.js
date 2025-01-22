@@ -39,6 +39,12 @@ class Model {
         let url = `${this.cdnPath}model/${target}/index.json`;
         this.modelIndex = await fetch(url).then(response => response.json());
         this.modelIndex.url = url;
+        if (!this.modelIndex.motions.idle) {
+            this.modelIndex.motions.idle = this.modelIndex.motions.idle01;
+        }
+        if (!this.modelIndex.expressions.find(expression => expression.name === "idle")) {
+            this.modelIndex.expressions.push({ name: "idle", file: this.modelIndex.expressions.find(expression => expression.name === "idle01").file });
+        }
         this.modelMotions = Object.keys(this.modelIndex.motions);
         this.modelExpressions = this.modelIndex.expressions.map(expression => expression.name);
         this.app.stage.removeChildren();
