@@ -2,7 +2,7 @@
 
 个人自用的Live2D API，用于在任意网页上引入MyGO!!!!!的Live2D模型。
 
-该仓库中所有Live2D相关资源均来自于网络，仅供学习交流，请勿用于商业用途，如有侵权，请联系删除。
+该仓库中所有Live2D相关资源均来自于网络，**仅供学习交流，请勿用于商业用途，如有侵权，请联系删除**。
 
 [**点击查看示例网页**](https://live2d-api-mygo.panxuc.com/)。示例网页中模型位于左下角。
 
@@ -13,7 +13,7 @@
   - 该项目代码参考自[stevenjoezhang/live2d-widget](https://github.com/stevenjoezhang/live2d-widget)。
   - 该项目模型来自[Eikanya/Live2d-model](https://github.com/Eikanya/Live2d-model)，仅供学习交流，请勿用于商业用途，如有侵权，请联系删除。
 - 本项目使用[PixiJS](https://github.com/pixijs/pixijs)重写了Live2D渲染部分。Live2D部分使用[pixi-live2d-display](https://github.com/guansss/pixi-live2d-display)进行渲染。
-- 本项目模型来自[Bestdori](https://bestdori.com/)提供的《梦想协奏曲！少女乐团派对》游戏数据包资源。为了适配此项目，对Live2D模型进行了一些必要的修改。仅供学习交流，请勿用于商业用途，如有侵权，请联系删除。
+- 本项目模型来自[Bestdori](https://bestdori.com/)提供的《梦想协奏曲！少女乐团派对》游戏数据包资源。为了适配此项目，对Live2D模型进行了一些必要的修改（根据数据包源文件为每个模型生成了`index.json`，并将`idle01`动作和表情重命名为`idle`）。**仅供学习交流，请勿用于商业用途，如有侵权，请联系删除**。
 - 本项目完全移除了[stevenjoezhang/live2d-widget](https://github.com/stevenjoezhang/live2d-widget)中的下头文本，为每位角色设计了单独的一套台词，大多数出自动画台词和游戏日常对话。
 - 由于匹配文本和动作、表情太麻烦了，文本量还很大，所以使用[DeepSeek](https://chat.deepseek.com/)为文本匹配了动作和表情。可能会出现不灵活或者OOC的情况。
 
@@ -169,7 +169,7 @@
 稳定版本：
 
 ```html
-<script src="https://cdn.jsdelivr.net/gh/panxuc/live2d-api-mygo@v0.1.3/autoload.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/panxuc/live2d-api-mygo@v0.1.4/autoload.js"></script>
 ```
 
 最新版本：
@@ -185,7 +185,7 @@
 默认情况下，只在浏览器宽度大于768px时显示模型，以防止模型对手机端网页阅读造成不便；模型默认显示在左下角。你也可以通过URL传递参数修改这个配置：
 
 ```html
-<script src="https://cdn.jsdelivr.net/gh/panxuc/live2d-api-mygo@v0.1.3/autoload.js?width_limit=0&position=right&preload=ALL"></script>
+<script src="https://cdn.jsdelivr.net/gh/panxuc/live2d-api-mygo@v0.1.4/autoload.js?width_limit=0&position=right&preload=ALL"></script>
 ```
 
 - `width_limit`：宽度限制，单位为像素，当浏览器宽度大于此值时显示模型，默认为768。
