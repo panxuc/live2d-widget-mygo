@@ -13,7 +13,7 @@
   - 该项目代码参考自[stevenjoezhang/live2d-widget](https://github.com/stevenjoezhang/live2d-widget)。
   - 该项目模型来自[Eikanya/Live2d-model](https://github.com/Eikanya/Live2d-model)，仅供学习交流，请勿用于商业用途，如有侵权，请联系删除。
 - 本项目使用[PixiJS](https://github.com/pixijs/pixijs)重写了Live2D渲染部分。Live2D部分使用[pixi-live2d-display](https://github.com/guansss/pixi-live2d-display)进行渲染。
-- 本项目模型来自[Bestdori](https://bestdori.com/)提供的《梦想协奏曲！少女乐团派对》游戏数据包资源。为了适配此项目，对Live2D模型进行了一些必要的修改（根据数据包源文件为每个模型生成了`index.json`，并将`idle01`动作和表情重命名为`idle`）。**仅供学习交流，请勿用于商业用途，如有侵权，请联系删除**。
+- 本项目模型来自[Bestdori](https://bestdori.com/)提供的《梦想协奏曲！少女乐团派对》游戏数据包资源。为了适配此项目，对Live2D模型进行了一些必要的修改（根据数据包源文件为每个模型生成了`index.json`）。**仅供学习交流，请勿用于商业用途，如有侵权，请联系删除**。
 - 本项目完全移除了[stevenjoezhang/live2d-widget](https://github.com/stevenjoezhang/live2d-widget)中的下头文本，为每位角色设计了单独的一套台词，大多数出自动画台词和游戏日常对话。
 - 由于匹配文本和动作、表情太麻烦了，文本量还很大，所以使用[DeepSeek](https://chat.deepseek.com/)为文本匹配了动作和表情。可能会出现不灵活或者OOC的情况。
 
@@ -126,6 +126,14 @@
       <td></td>
       <td></td>
       <td><img src="assets/040_live_event_277_ur.png" alt="040_live_event_277_ur"><br><span lang="ja">お待たせいたしました</span></td>
+    </tr>
+    <tr>
+      <td><img src="assets/banner_memorial_event286.png" alt="banner_memorial_event277"><br>live_event_286</td>
+      <td><img src="assets/036_live_event_286_ur.png" alt="036_live_event_286_ur"><br><span lang="ja">路地裏を抜けて</span></td>
+      <td><img src="assets/037_live_event_286_sr.png" alt="037_live_event_286_sr"><br><span lang="ja">探しに行っちゃう？</span></td>
+      <td><img src="assets/038_live_event_286_ur.png" alt="038_live_event_286_ur"><br><span lang="ja">あの日の縁側</span></td>
+      <td><img src="assets/039_live_event_286_ssr.png" alt="039_live_event_286_ssr"><br><span lang="ja">こちらはこちらで</span></td>
+      <td><img src="assets/040_live_event_286_r.png" alt="040_live_event_286_r"><br><span lang="ja">凛と立つ</span></td>
     </tr>
     <tr>
       <td>birthday_2024</td>
