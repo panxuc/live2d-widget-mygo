@@ -177,13 +177,13 @@
 稳定版本：
 
 ```html
-<script src="https://cdn.jsdelivr.net/gh/panxuc/live2d-api-mygo@latest/autoload.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/panxuc/live2d-widget-mygo@latest/autoload.js"></script>
 ```
 
 最新版本：
 
 ```html
-<script src="https://cdn.jsdelivr.net/gh/panxuc/live2d-api-mygo/autoload.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/panxuc/live2d-widget-mygo/autoload.js"></script>
 ```
 
 即使你fork了本项目，也请填写你的js文件的绝对路径而非相对路径，以避免出现各种奇怪的问题。
@@ -193,7 +193,7 @@
 默认情况下，只在浏览器宽度大于768px时显示模型，以防止模型对手机端网页阅读造成不便；模型默认显示在左下角。你也可以通过URL传递参数修改这个配置：
 
 ```html
-<script src="https://cdn.jsdelivr.net/gh/panxuc/live2d-api-mygo@latest/autoload.js?width_limit=0&position=right&preload=ALL"></script>
+<script src="https://cdn.jsdelivr.net/gh/panxuc/live2d-widget-mygo@latest/autoload.js?width_limit=0&position=right&preload=ALL"></script>
 ```
 
 - `width_limit`：宽度限制，单位为像素，当浏览器宽度大于此值时显示模型，默认为768。

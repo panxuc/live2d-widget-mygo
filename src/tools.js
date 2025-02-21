@@ -44,7 +44,7 @@ const tools = {
     "info": {
         icon: fa_info_circle,
         callback: () => {
-            open("https://github.com/panxuc/live2d-api-mygo");
+            open("https://github.com/panxuc/live2d-widget-mygo");
         }
     },
     "quit": {
