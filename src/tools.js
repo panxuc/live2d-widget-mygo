@@ -33,14 +33,14 @@ const tools = {
         icon: fa_street_view,
         callback: () => { }
     },
-    "photo": {
-        icon: fa_camera_retro,
-        callback: () => {
-            // showMessage("照好了嘛，是不是很可爱呢？", 6000, 9);
-            Live2D.captureName = "photo.png";
-            Live2D.captureFrame = true;
-        }
-    },
+    // "photo": {
+    //     icon: fa_camera_retro,
+    //     callback: () => {
+    //         // showMessage("照好了嘛，是不是很可爱呢？", 6000, 9);
+    //         Live2D.captureName = "photo.png";
+    //         Live2D.captureFrame = true;
+    //     }
+    // },
     "info": {
         icon: fa_info_circle,
         callback: () => {

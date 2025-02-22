@@ -139,7 +139,7 @@
       <td>birthday_2024</td>
       <td><img src="assets/036_birthday_2024_ssr.png" alt="036_birthday_2024_ssr"><br><span lang="ja">Hopeful birthday！</span></td>
       <td><img src="assets/037_birthday_2024_ssr.png" alt="037_birthday_2024_ssr"><br><span lang="ja">Hopeful birthday！</span></td>
-      <td></td>
+      <td><img src="assets/038_birthday_2024_ssr.png" alt="038_birthday_2024_ssr"><br><span lang="ja">Hopeful birthday！</span></td>
       <td><img src="assets/039_birthday_2024_ssr.png" alt="039_birthday_2024_ssr"><br><span lang="ja">Hopeful birthday！</span></td>
       <td><img src="assets/040_birthday_2024_ssr.png" alt="040_birthday_2024_ssr"><br><span lang="ja">Hopeful birthday！</span></td>
     </tr>
