@@ -149,7 +149,7 @@
       <td><img src="assets/037_dream_festival_3_ur.png" alt="037_dream_festival_3_ur"><br><span lang="ja">目覚めのあくびタイム</span></td>
       <td><img src="assets/038_dream_festival_3_ur.png" alt="038_dream_festival_3_ur"><br><span lang="ja">帰り道、雪舞う中で</span></td>
       <td><img src="assets/039_dream_festival_3_ur.png" alt="039_dream_festival_3_ur"><br><span lang="ja">この繋がりの名前は</span></td>
-      <td></td>
+      <td><img src="assets/040_dream_festival_3_ur.png" alt="040_dream_festival_3_ur"><br><span lang="ja">カウンター越しの君</span></td>
     </tr>
     <tr>
       <td>collabo_d_3</td>
