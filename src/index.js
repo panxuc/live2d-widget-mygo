@@ -8,13 +8,7 @@ import tools from "./tools.js";
 window.PIXI = PIXI;
 
 async function loadWidget() {
-    document.body.insertAdjacentHTML("beforeend", `<div id="waifu">
-        <canvas id="live2d" width="800" height="800"></canvas>
-        <div id="waifu-tips"></div>
-        <div id="waifu-tool"></div>
-        <div id="model-selection-panel" style="display: none;"></div>
-        <div id="texture-selection-panel" style="display: none;"></div>
-    </div>`);
+    document.body.insertAdjacentHTML("beforeend", `<div id="waifu"><canvas id="live2d" width="800" height="800"></canvas><div id="waifu-tips"></div><div id="waifu-tool"></div><div id="model-selection-panel" style="display: none;"></div><div id="texture-selection-panel" style="display: none;"></div></div>`);
     const model = new Model();
     localStorage.removeItem("waifu-display");
     sessionStorage.removeItem("waifu-text");
