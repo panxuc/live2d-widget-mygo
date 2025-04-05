@@ -142,6 +142,14 @@
       <td><img src="assets/040_live_event_286_r.png" alt="040_live_event_286_r"><br><span lang="ja">凛と立つ</span></td>
     </tr>
     <tr>
+      <td><img src="assets/banner_memorial_event289.png" alt="banner_memorial_event277"><br>live_event_289</td>
+      <td><img src="assets/036_live_event_289_ur.png" alt="036_live_event_289_ur"><br><span lang="ja">歓星の共鳴</span></td>
+      <td></td>
+      <td></td>
+      <td><img src="assets/039_live_event_289_ur.png" alt="039_live_event_289_ur"><br><span lang="ja">幕開け前のひととき</span></td>
+      <td></td>
+    </tr>
+    <tr>
       <td>birthday_2024</td>
       <td><img src="assets/036_birthday_2024_ssr.png" alt="036_birthday_2024_ssr"><br><span lang="ja">Hopeful birthday！</span></td>
       <td><img src="assets/037_birthday_2024_ssr.png" alt="037_birthday_2024_ssr"><br><span lang="ja">Hopeful birthday！</span></td>

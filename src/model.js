@@ -22,16 +22,22 @@ class Model {
         this.modelList = await response.json();
     }
 
+    async loadWaifuTips() {
+        const response = await fetch(this.waifuPath);
+        this.waifuTips = await response.json();
+    }
+
     async loadModel(modelId, modelTexturesId, message) {
         if (!this.modelList) await this.loadModelList();
+        if (!this.waifuTips) await this.loadWaifuTips();
         if (modelId >= this.modelList.models.length) {
             modelId %= this.modelList.models.length;
         }
         if (modelTexturesId >= this.modelList.models[modelId].length) {
             modelTexturesId %= this.modelList.models[modelId].length;
         }
-        localStorage.setItem("modelId", modelId);
-        localStorage.setItem("modelTexturesId", modelTexturesId);
+        setModelId(modelId);
+        setModelTexturesId(modelTexturesId);
         console.log(`Live2D Model ${modelId}-${modelTexturesId}`);
         showMessage(this, message, 4000, 10);
         const target = this.modelList.models[modelId][modelTexturesId];
@@ -51,24 +57,7 @@ class Model {
         this.model = await Live2DModel.from(this.modelIndex, { motionPreload: getConfig().preload });
         this.app.stage.addChild(this.model);
         this.model.scale.set(0.33);
-        fetch(this.waifuPath)
-            .then(response => response.json())
-            .then(updateMessageArray);
-    }
-
-    async loadOtherModel() {
-        if (!this.modelList) await this.loadModelList();
-        setModelId((getModelId() + 1 >= this.modelList.models.length) ? 0 : getModelId() + 1);
-        setModelTexturesId(randomSelection(this.modelList.models[getModelId()].length));
-        // setModelTexturesId(0);
-        this.loadModel(getModelId(), getModelTexturesId(), this.modelList.messages[getModelId()]);
-    }
-
-    async loadOtherTextureModel() {
-        if (!this.modelList) await this.loadModelList();
-        // setModelTexturesId((getModelTexturesId() + 1 >= this.modelList.models[getModelId()].length) ? 0 : getModelTexturesId() + 1);
-        setModelTexturesId(randomSelection(this.modelList.models[getModelId()].length));
-        this.loadModel(getModelId(), getModelTexturesId(), this.modelList.messages[getModelId()]);
+        updateMessageArray(this.waifuTips);
     }
 }
 

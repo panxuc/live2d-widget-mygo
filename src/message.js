@@ -18,7 +18,6 @@ function showMessage(model, text, timeout, priority) {
         tips.classList.remove("waifu-tips-active");
     }, timeout);
     model.model.motion(text.motion);
-    model.model.expression(text.expression);
 }
 
 export default showMessage;
