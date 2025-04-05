@@ -312,3 +312,37 @@
     transform: translate(0, 0) rotate(0);
   }
 }
+
+#model-selection-panel,
+#texture-selection-panel {
+  position: absolute;
+  top: 0px;
+  right: 20px;
+  width: 200px;
+  height: 300px;
+  overflow-y: auto;
+  background-color: rgba(255, 255, 255, 0.95);
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  z-index: 10;
+}
+
+#model-selection-panel button,
+#texture-selection-panel button {
+  display: block;
+  width: 100%;
+  margin-bottom: 5px;
+  padding: 5px;
+  font-size: 14px;
+  border: none;
+  background: #f0f0f0;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+#model-selection-panel button:hover,
+#texture-selection-panel button:hover {
+  background: #e0e0e0;
+}
