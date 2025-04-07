@@ -46,9 +46,9 @@ function compressStaticAssets() {
             minifiedContent = JSON.stringify(JSON.parse(content))
           }
           await fs.writeFile(filePath, minifiedContent, 'utf-8')
-          console.log(`Compressed: ${filePath}`)
+          // console.log(`Compressed: ${filePath}`)
         } catch (error) {
-          console.error(`Error compressing ${filePath}:`, error)
+          // console.error(`Error compressing ${filePath}:`, error)
         }
       }
       await walkDir(outDir)

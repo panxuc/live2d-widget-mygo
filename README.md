@@ -6,6 +6,8 @@
 
 [**点击查看示例网页**](https://live2d-widget-mygo.vercel.app/)。示例网页中模型位于左下角。
 
+备用链接：[**点击查看示例网页**](https://live2d-widget-mygo.panxuc.com/)
+
 ## 介绍
 
 - 本项目搭建方式参考自[nova1751/live2d-api](https://github.com/nova1751/live2d-api)。
@@ -26,6 +28,36 @@
 - [x] 添加动作和表情。
 - [ ] 修正文本和动作、表情的匹配。
 - [x] 添加模型选择界面。
+
+## 使用
+
+只需在html页面的`head`或`body`中添加一行代码即可：
+
+```html
+<script src="https://live2d-widget-mygo.vercel.app/autoload.js"></script>
+```
+
+如果你在使用过程中遇到问题，可以尝试使用
+```html
+<script src="https://live2d-widget-mygo.panxuc.com/autoload.js"></script>
+```
+来替换上面的链接。该链接是本项目的备用链接，可能会更稳定。
+
+即使你fork了本项目，也请填写你的js文件的绝对路径而非相对路径，以避免出现各种奇怪的问题。
+
+### 自定义配置
+
+默认情况下，只在浏览器宽度大于768px时显示模型，以防止模型对手机端网页阅读造成不便；模型默认显示在左下角。你也可以通过URL传递参数修改这个配置：
+
+```html
+<script src="https://live2d-widget-mygo.vercel.app/autoload.js?width_limit=0&position=right&preload=ALL"></script>
+```
+
+- `width_limit`：宽度限制，单位为像素，当浏览器宽度大于此值时显示模型，默认为768。
+- `position`：模型位置，可选值为`left`和`right`，默认为`left`。
+- `preload`：是否预加载模型的表情和动作，可选值为`ALL`（预加载全部表情和动作，可能导致加载新模型时网络阻塞，但动作切换较为流畅）、`IDLE`（只预加载默认表情和动作，需要时加载其他表情和动作）和`NONE`（不预加载任何表情和动作，需要时加载其他表情和动作），默认为`IDLE`。
+
+也可以下载js和css文件来进行自定义配置，详细请参考[live2d-widget配置](https://github.com/stevenjoezhang/live2d-widget#%E9%85%8D%E7%BD%AE-configuration)。
 
 ## 模型
 
@@ -181,27 +213,3 @@
     </tr>
   </tbody>
 </table>
-
-## 使用
-
-只需在html页面的`head`或`body`中添加一行代码即可：
-
-```html
-<script src="https://live2d-widget-mygo.vercel.app/autoload.js"></script>
-```
-
-即使你fork了本项目，也请填写你的js文件的绝对路径而非相对路径，以避免出现各种奇怪的问题。
-
-### 自定义配置
-
-默认情况下，只在浏览器宽度大于768px时显示模型，以防止模型对手机端网页阅读造成不便；模型默认显示在左下角。你也可以通过URL传递参数修改这个配置：
-
-```html
-<script src="https://live2d-widget-mygo.vercel.app/autoload.js?width_limit=0&position=right&preload=ALL"></script>
-```
-
-- `width_limit`：宽度限制，单位为像素，当浏览器宽度大于此值时显示模型，默认为768。
-- `position`：模型位置，可选值为`left`和`right`，默认为`left`。
-- `preload`：是否预加载模型的表情和动作，可选值为`ALL`（预加载全部表情和动作，可能导致加载新模型时网络阻塞，但动作切换较为流畅）、`IDLE`（只预加载默认表情和动作，需要时加载其他表情和动作）和`NONE`（不预加载任何表情和动作，需要时加载其他表情和动作），默认为`IDLE`。
-
-也可以下载js和css文件来进行自定义配置，详细请参考[live2d-widget配置](https://github.com/stevenjoezhang/live2d-widget#%E9%85%8D%E7%BD%AE-configuration)。
