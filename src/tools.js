@@ -29,10 +29,10 @@ const tools = {
         icon: fa_user_circle,
         callback: () => { }
     },
-    "switch-texture": {
-        icon: fa_street_view,
-        callback: () => { }
-    },
+    // "switch-texture": {
+    //     icon: fa_street_view,
+    //     callback: () => { }
+    // },
     // "photo": {
     //     icon: fa_camera_retro,
     //     callback: () => {

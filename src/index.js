@@ -23,10 +23,10 @@ async function loadWidget() {
             const panel = document.getElementById("model-selection-panel");
             panel.style.display = panel.style.display === "none" ? "block" : "none";
         };
-        tools["switch-texture"].callback = () => {
-            const panel = document.getElementById("texture-selection-panel");
-            panel.style.display = panel.style.display === "none" ? "block" : "none";
-        };
+        // tools["switch-texture"].callback = () => {
+        //     const panel = document.getElementById("texture-selection-panel");
+        //     panel.style.display = panel.style.display === "none" ? "block" : "none";
+        // };
         if (!Array.isArray(getConfig().tools)) {
             getConfig().tools = Object.keys(tools);
         }
@@ -45,13 +45,15 @@ async function loadWidget() {
     let modelButtonsHtml = '';
     modelList.forEach((textures, index) => {
         let modelName = textures[0].split('/')[0];
-        modelButtonsHtml += `<button class="model-option" data-model-index="${index}">${modelName}</button>`;
+        let defaultTexture = textures.find(texture => texture.includes("_live_default")).split('/')[1];
+        modelButtonsHtml += `<button class="model-option" data-model-index="${index}"><img src="${getConfig().cdnPath}assets/${defaultTexture}.png" alt="${modelName}"></button>`;
     });
     modelPanel.innerHTML = modelButtonsHtml;
 
     modelPanel.addEventListener("click", event => {
-        if (event.target.matches(".model-option")) {
-            selectedModelIndex = parseInt(event.target.getAttribute("data-model-index"));
+        const button = event.target.closest(".model-option");
+        if (button) {
+            selectedModelIndex = parseInt(button.getAttribute("data-model-index"));
             // Populate the Texture Selection Panel based on the selected model's textures
             populateTexturePanel(model.modelList[selectedModelIndex]);
             modelPanel.style.display = "none";
@@ -63,19 +65,44 @@ async function loadWidget() {
         const texturePanel = document.getElementById("texture-selection-panel");
         let textureButtonsHtml = '';
         textures.forEach((textureStr, index) => {
-            let parts = textureStr.split('/');
-            let textureName = parts[1];
-            textureButtonsHtml += `<button class="texture-option" data-texture-index="${index}">${textureName}</button>`;
+            let textureName = textureStr.split('/')[1];
+            if (textureName.includes("_casual-2023")) {
+                textureButtonsHtml += `<button class="texture-option" data-texture-index="${index}">常服</button>`;
+            } else if (textureName.includes("_school_winter-2023")) {
+                textureButtonsHtml += `<button class="texture-option" data-texture-index="${index}">冬季校服</button>`;
+            } else if (textureName.includes("_school_summer-2023")) {
+                textureButtonsHtml += `<button class="texture-option" data-texture-index="${index}">夏季校服</button>`;
+            } else if (textureName === "036_2024_furisode") {
+                textureButtonsHtml += `<button class="texture-option" data-texture-index="${index}">和服</button>`;
+            } else if (textureName === "040_arbeit") {
+                textureButtonsHtml += `<button class="texture-option" data-texture-index="${index}">RiNG制服</button>`;
+            } else if (textureName === "040_event_277_story_01") {
+                textureButtonsHtml += `<button class="texture-option" data-texture-index="${index}">羽泽咖啡店制服</button>`;
+            } else {
+                textureButtonsHtml += `<button class="texture-option" data-texture-index="${index}"><img src="${getConfig().cdnPath}assets/${textureName}.png" alt="${textureName}"></button>`;
+            }
         });
         texturePanel.innerHTML = textureButtonsHtml;
     }
 
     const texturePanel = document.getElementById("texture-selection-panel");
     texturePanel.addEventListener("click", async event => {
-        if (event.target.matches(".texture-option")) {
-            const selectedTextureIndex = event.target.getAttribute("data-texture-index");
+        const button = event.target.closest(".texture-option");
+        if (button) {
+            const selectedTextureIndex = button.getAttribute("data-texture-index");
             await model.loadModel(selectedModelIndex, selectedTextureIndex);
             texturePanel.style.display = "none";
+        }
+    });
+
+    document.addEventListener("click", event => {
+        if (!event.target.closest("#model-selection-panel") &&
+            !event.target.closest("#texture-selection-panel") &&
+            !event.target.closest("#waifu-tool")) {
+            const modelPanel = document.getElementById("model-selection-panel");
+            const texturePanel = document.getElementById("texture-selection-panel");
+            if (modelPanel) modelPanel.style.display = "none";
+            if (texturePanel) texturePanel.style.display = "none";
         }
     });
 

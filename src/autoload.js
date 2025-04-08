@@ -88,7 +88,7 @@ if (screen.width >= live2dConfig.width_limit) {
         tools: [
           // 'hitokoto',
           'switch-model',
-          'switch-texture',
+          // 'switch-texture',
           // 'photo',
           'info',
           'quit',
