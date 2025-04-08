@@ -4,6 +4,8 @@ import Model from "./model.js";
 import showMessage from "./message.js";
 import randomSelection from "./utils.js";
 import tools from "./tools.js";
+import modelList from "./modelList.js";
+import tips from "./tips.js";
 
 window.PIXI = PIXI;
 
@@ -40,8 +42,6 @@ async function loadWidget() {
     let selectedModelIndex = null;
 
     const modelPanel = document.getElementById("model-selection-panel");
-    if (!model.modelList) await model.loadModelList();
-    const modelList = model.modelList.models;
     let modelButtonsHtml = '';
     modelList.forEach((textures, index) => {
         let modelName = textures[0].split('/')[0];
@@ -53,7 +53,7 @@ async function loadWidget() {
         if (event.target.matches(".model-option")) {
             selectedModelIndex = parseInt(event.target.getAttribute("data-model-index"));
             // Populate the Texture Selection Panel based on the selected model's textures
-            populateTexturePanel(model.modelList.models[selectedModelIndex]);
+            populateTexturePanel(model.modelList[selectedModelIndex]);
             modelPanel.style.display = "none";
             document.getElementById("texture-selection-panel").style.display = "block";
         }
@@ -147,9 +147,7 @@ async function loadWidget() {
             resetModelState();
         }
         await model.loadModel(getModelId(), getModelTexturesId());
-        fetch(getConfig().waifuPath)
-            .then(response => response.json())
-            .then(registerEventListener);
+        registerEventListener(tips);
     })();
 
 }
@@ -181,4 +179,4 @@ async function initWidget(config) {
     }
 }
 
-export default initWidget;
+window.initWidget = initWidget;

@@ -28,7 +28,7 @@ function loadExternalResource(url, type) {
   });
 }
 
-// 加载 waifu.css live2d.min.js waifu-tips.js
+// 加载 waifu.css live2d.min.js index.js
 if (screen.width >= live2dConfig.width_limit) {
   Promise.all([
     loadExternalResource(live2d_path + 'waifu.css', 'css'),
@@ -36,7 +36,7 @@ if (screen.width >= live2dConfig.width_limit) {
     // loadExternalResource(live2d_path + 'live2dcubismcore.min.js', 'js'),
   ]).then(() => {
     Promise.all([
-      loadExternalResource(live2d_path + 'waifu-tips.js', 'js'),
+      loadExternalResource(live2d_path + 'index.js', 'js'),
     ]).then(() => {
       if (live2dConfig.position === 'right') {
         const sheet = Array.from(document.styleSheets).find(
@@ -83,14 +83,13 @@ if (screen.width >= live2dConfig.width_limit) {
       }
       // 配置选项的具体用法见 README.md
       initWidget({
-        waifuPath: live2d_path + 'waifu-tips.json',
         cdnPath: live2d_path,
         preload: live2dConfig.preload,
         tools: [
           // 'hitokoto',
           'switch-model',
           'switch-texture',
-          'photo',
+          // 'photo',
           'info',
           'quit',
         ],

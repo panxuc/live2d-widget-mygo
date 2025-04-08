@@ -2,11 +2,11 @@ import * as PIXI from "pixi.js";
 import { Live2DModel } from 'pixi-live2d-display/cubism2';
 import { getModelId, setModelId, getModelTexturesId, setModelTexturesId, getConfig, updateMessageArray } from "./config.js";
 import showMessage from "./message.js";
-import randomSelection from "./utils.js";
+import modelList from "./modelList.js";
+import tips from "./tips.js";
 
 class Model {
     constructor() {
-        this.waifuPath = getConfig().waifuPath;
         this.cdnPath = getConfig().cdnPath;
         this.app = new PIXI.Application({
             view: document.getElementById("live2d"),
@@ -15,32 +15,22 @@ class Model {
             height: 800,
             backgroundAlpha: 0,
         });
-    }
-
-    async loadModelList() {
-        const response = await fetch(`${this.cdnPath}model_list.json`);
-        this.modelList = await response.json();
-    }
-
-    async loadWaifuTips() {
-        const response = await fetch(this.waifuPath);
-        this.waifuTips = await response.json();
+        this.modelList = modelList;
+        this.tips = tips;
     }
 
     async loadModel(modelId, modelTexturesId, message) {
-        if (!this.modelList) await this.loadModelList();
-        if (!this.waifuTips) await this.loadWaifuTips();
-        if (modelId >= this.modelList.models.length) {
-            modelId %= this.modelList.models.length;
+        if (modelId >= this.modelList.length) {
+            modelId %= this.modelList.length;
         }
-        if (modelTexturesId >= this.modelList.models[modelId].length) {
-            modelTexturesId %= this.modelList.models[modelId].length;
+        if (modelTexturesId >= this.modelList[modelId].length) {
+            modelTexturesId %= this.modelList[modelId].length;
         }
         setModelId(modelId);
         setModelTexturesId(modelTexturesId);
         console.log(`Live2D Model ${modelId}-${modelTexturesId}`);
         showMessage(this, message, 4000, 10);
-        const target = this.modelList.models[modelId][modelTexturesId];
+        const target = this.modelList[modelId][modelTexturesId];
         // loadlive2d("live2d", `${this.cdnPath}model/${target}/index.json`);
         let url = `${this.cdnPath}model/${target}/index.json`;
         this.modelIndex = await fetch(url).then(response => response.json());
@@ -57,7 +47,7 @@ class Model {
         this.model = await Live2DModel.from(this.modelIndex, { motionPreload: getConfig().preload });
         this.app.stage.addChild(this.model);
         this.model.scale.set(0.33);
-        updateMessageArray(this.waifuTips);
+        updateMessageArray(this.tips);
     }
 }
 

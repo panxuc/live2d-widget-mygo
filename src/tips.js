@@ -1,4 +1,4 @@
-{
+const tips = {
   "message": {
     "default": [
       [
@@ -4677,4 +4677,6 @@
       ]
     }
   ]
-}
+};
+
+export default tips;

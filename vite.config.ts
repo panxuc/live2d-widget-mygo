@@ -62,7 +62,7 @@ export default defineConfig({
     rollupOptions: {
       input: {
         autoload: resolve(__dirname, 'src/autoload.js'),
-        'waifu-tips': resolve(__dirname, 'src/waifu-tips.js'),
+        index: resolve(__dirname, 'src/index.js'),
       },
       output: {
         entryFileNames: '[name].js',
