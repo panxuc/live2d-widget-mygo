@@ -196,6 +196,14 @@
       <td><img src="./public/assets/040_dream_festival_3_ur.png" alt="040_dream_festival_3_ur"><br><span lang="ja">カウンター越しの君</span></td>
     </tr>
     <tr>
+      <td>collabo_a</td>
+      <td><img src="./public/assets/036_collabo_a_ur.png" alt="036_collabo_a_ur"><br><span lang="ja">見上げた視線の先は</span></td>
+      <td><img src="./public/assets/037_collabo_a_ur.png" alt="037_collabo_a_ur"><br><span lang="ja">その先にある輝き</span></td>
+      <td><img src="./public/assets/038_collabo_a_ur.png" alt="038_collabo_a_ur"><br><span lang="ja">今、この先</span></td>
+      <td><img src="./public/assets/039_collabo_a_ur.png" alt="039_collabo_a_ur"><br><span lang="ja">時の流れの先に</span></td>
+      <td><img src="./public/assets/040_collabo_a_ur.png" alt="040_collabo_a_ur"><br><span lang="ja">進む先にある答え</span></td>
+    </tr>
+    <tr>
       <td>collabo_d_3</td>
       <td><img src="./public/assets/036_collabo_d_3_ur.png" alt="036_collabo_d_3_ur"><br><span lang="ja">のんびりダイアログ</span></td>
       <td></td>

@@ -12,6 +12,7 @@ const modelList = [
     "tomori/036_live_event_289_ur",
     "tomori/036_birthday_2024_ssr",
     "tomori/036_dream_festival_3_ur",
+    "tomori/036_collabo_a_ur",
     "tomori/036_collabo_d_3_ur",
     "tomori/036_2024_furisode"
   ],
@@ -28,7 +29,8 @@ const modelList = [
     "anon/037_live_event_277_sr",
     "anon/037_live_event_286_sr",
     "anon/037_birthday_2024_ssr",
-    "anon/037_dream_festival_3_ur"
+    "anon/037_dream_festival_3_ur",
+    "anon/037_collabo_a_ur",
   ],
   [
     "rana/038_casual-2023",
@@ -41,7 +43,8 @@ const modelList = [
     "rana/038_live_event_250_sr",
     "rana/038_live_event_286_ur",
     "rana/038_birthday_2024_ssr",
-    "rana/038_dream_festival_3_ur"
+    "rana/038_dream_festival_3_ur",
+    "rana/038_collabo_a_ur",
   ],
   [
     "soyo/039_casual-2023",
@@ -55,7 +58,8 @@ const modelList = [
     "soyo/039_live_event_286_ssr",
     "soyo/039_live_event_289_ur",
     "soyo/039_birthday_2024_ssr",
-    "soyo/039_dream_festival_3_ur"
+    "soyo/039_dream_festival_3_ur",
+    "soyo/039_collabo_a_ur",
   ],
   [
     "taki/040_casual-2023",
@@ -70,6 +74,7 @@ const modelList = [
     "taki/040_live_event_286_r",
     "taki/040_birthday_2024_ssr",
     "taki/040_dream_festival_3_ur",
+    "taki/040_collabo_a_ur",
     "taki/040_arbeit",
     "taki/040_event_277_story_01"
   ]
