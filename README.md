@@ -108,7 +108,7 @@
       <td>夏季校服</td>
     </tr>
     <tr>
-      <td>live_default</td>
+      <td><img src="./public/assets/banner_gacha1206.png" alt="banner_gacha1206"><br>live_default</td>
       <td><img src="./public/assets/036_live_default.png" alt="036_live_default"><br><span lang="ja">一生を、はじめよう</span></td>
       <td><img src="./public/assets/037_live_default.png" alt="037_live_default"><br><span lang="ja">一生を、はじめよう</span></td>
       <td><img src="./public/assets/038_live_default.png" alt="038_live_default"><br><span lang="ja">一生を、はじめよう</span></td>
@@ -116,7 +116,7 @@
       <td><img src="./public/assets/040_live_default.png" alt="040_live_default"><br><span lang="ja">一生を、はじめよう</span></td>
     </tr>
     <tr>
-      <td>live_sr_01</td>
+      <td><img src="./public/assets/banner_gacha1206.png" alt="banner_gacha1206"><br>live_sr_01</td>
       <td><img src="./public/assets/036_live_sr_01.png" alt="036_live_sr_01"><br><span lang="ja">不思議な小動物</span></td>
       <td><img src="./public/assets/037_live_sr_01.png" alt="037_live_sr_01"><br><span lang="ja">仲良くする相手は…</span></td>
       <td><img src="./public/assets/038_live_sr_01.png" alt="038_live_sr_01"><br><span lang="ja">爪弾く猫</span></td>
@@ -124,7 +124,7 @@
       <td><img src="./public/assets/040_live_sr_01.png" alt="040_live_sr_01"><br><span lang="ja">守るのは、過去</span></td>
     </tr>
     <tr>
-      <td><img src="./public/assets/banner_memorial_event235.png" alt="banner_memorial_event235"><br>live_event_235</td>
+      <td><img src="./public/assets/banner_event235.png" alt="banner_event235"><br>live_event_235</td>
       <td><img src="./public/assets/036_live_event_235_ur.png" alt="036_live_event_235_ur"><br><span lang="ja">心の叫び</span></td>
       <td><img src="./public/assets/037_live_event_235_ur.png" alt="037_live_event_235_ur"><br><span lang="ja">迷いながら</span></td>
       <td><img src="./public/assets/038_live_event_235_sr.png" alt="038_live_event_235_sr"><br><span lang="ja">気の向くままに</span></td>
@@ -132,7 +132,7 @@
       <td><img src="./public/assets/040_live_event_235_sr.png" alt="040_live_event_235_sr"><br><span lang="ja">理想に届かない</span></td>
     </tr>
     <tr>
-      <td><img src="./public/assets/banner_memorial_event240.png" alt="banner_memorial_event240"><br>live_event_240</td>
+      <td><img src="./public/assets/banner_event240.png" alt="banner_event240"><br>live_event_240</td>
       <td><img src="./public/assets/036_live_event_240_ssr.png" alt="036_live_event_240_ssr"><br><span lang="ja">立希ちゃんのとなりで</span></td>
       <td><img src="./public/assets/037_live_event_240_sr.png" alt="037_live_event_240_sr"><br><span lang="ja">リーダー推薦</span></td>
       <td><img src="./public/assets/038_live_event_240_ur.png" alt="038_live_event_240_ur"><br><span lang="ja">コインパーキングの猫</span></td>
@@ -140,7 +140,7 @@
       <td><img src="./public/assets/040_live_event_240_ur.png" alt="040_live_event_240_ur"><br><span lang="ja">私と、取引しよう</span></td>
     </tr>
     <tr>
-      <td><img src="./public/assets/banner_memorial_event250.png" alt="banner_memorial_event250"><br>live_event_250</td>
+      <td><img src="./public/assets/banner_event250.png" alt="banner_event250"><br>live_event_250</td>
       <td><img src="./public/assets/036_live_event_250_ur.png" alt="036_live_event_250_ur"><br><span lang="ja">運命の一枚</span></td>
       <td><img src="./public/assets/037_live_event_250_r.png" alt="037_live_event_250_r"><br><span lang="ja">シックな花と</span></td>
       <td><img src="./public/assets/038_live_event_250_sr.png" alt="038_live_event_250_sr"><br><span lang="ja">ひま。</span></td>
@@ -148,7 +148,7 @@
       <td><img src="./public/assets/040_live_event_250_ssr.png" alt="040_live_event_250_ssr"><br><span lang="ja">買い出しよりも</span></td>
     </tr>
     <tr>
-      <td><img src="./public/assets/banner_memorial_event253.png" alt="banner_memorial_event253"><br>live_event_253</td>
+      <td><img src="./public/assets/banner_event253.png" alt="banner_event253"><br>live_event_253</td>
       <td></td>
       <td><img src="./public/assets/037_live_event_253_ur.png" alt="037_live_event_253_ur"><br><span lang="ja">お花見の記念に！</span></td>
       <td></td>
@@ -156,7 +156,7 @@
       <td></td>
     </tr>
     <tr>
-      <td><img src="./public/assets/banner_memorial_event277.png" alt="banner_memorial_event277"><br>live_event_277</td>
+      <td><img src="./public/assets/banner_event277.png" alt="banner_event277"><br>live_event_277</td>
       <td></td>
       <td><img src="./public/assets/037_live_event_277_sr.png" alt="037_live_event_277_sr"><br><span lang="ja">注文、いつもの</span></td>
       <td></td>
@@ -164,7 +164,7 @@
       <td><img src="./public/assets/040_live_event_277_ur.png" alt="040_live_event_277_ur"><br><span lang="ja">お待たせいたしました</span></td>
     </tr>
     <tr>
-      <td><img src="./public/assets/banner_memorial_event286.png" alt="banner_memorial_event277"><br>live_event_286</td>
+      <td><img src="./public/assets/banner_event286.png" alt="banner_event277"><br>live_event_286</td>
       <td><img src="./public/assets/036_live_event_286_ur.png" alt="036_live_event_286_ur"><br><span lang="ja">路地裏を抜けて</span></td>
       <td><img src="./public/assets/037_live_event_286_sr.png" alt="037_live_event_286_sr"><br><span lang="ja">探しに行っちゃう？</span></td>
       <td><img src="./public/assets/038_live_event_286_ur.png" alt="038_live_event_286_ur"><br><span lang="ja">あの日の縁側</span></td>
@@ -172,7 +172,7 @@
       <td><img src="./public/assets/040_live_event_286_r.png" alt="040_live_event_286_r"><br><span lang="ja">凛と立つ</span></td>
     </tr>
     <tr>
-      <td><img src="./public/assets/banner_memorial_event289.png" alt="banner_memorial_event277"><br>live_event_289</td>
+      <td><img src="./public/assets/banner_event289.png" alt="banner_event277"><br>live_event_289</td>
       <td><img src="./public/assets/036_live_event_289_ur.png" alt="036_live_event_289_ur"><br><span lang="ja">歓星の共鳴</span></td>
       <td></td>
       <td></td>
@@ -180,7 +180,7 @@
       <td></td>
     </tr>
     <tr>
-      <td>birthday_2024</td>
+      <td><img src="./public/assets/banner_gacha1330.png" alt="banner_gacha1330"><img src="./public/assets/banner_gacha1379.png" alt="banner_gacha1379"><img src="./public/assets/banner_gacha1391.png" alt="banner_gacha1391"><img src="./public/assets/banner_gacha1445.png" alt="banner_gacha1445"><img src="./public/assets/banner_gacha1517.png" alt="banner_gacha1517"><br>birthday_2024</td>
       <td><img src="./public/assets/036_birthday_2024_ssr.png" alt="036_birthday_2024_ssr"><br><span lang="ja">Hopeful birthday！</span></td>
       <td><img src="./public/assets/037_birthday_2024_ssr.png" alt="037_birthday_2024_ssr"><br><span lang="ja">Hopeful birthday！</span></td>
       <td><img src="./public/assets/038_birthday_2024_ssr.png" alt="038_birthday_2024_ssr"><br><span lang="ja">Hopeful birthday！</span></td>
@@ -188,7 +188,7 @@
       <td><img src="./public/assets/040_birthday_2024_ssr.png" alt="040_birthday_2024_ssr"><br><span lang="ja">Hopeful birthday！</span></td>
     </tr>
     <tr>
-      <td>dream_festival_3</td>
+      <td><img src="./public/assets/banner_gacha1447.png" alt="banner_gacha1447"><img src="./public/assets/banner_gacha1469.png" alt="banner_gacha1469"><img src="./public/assets/banner_gacha1503.png" alt="banner_gacha1503"><img src="./public/assets/banner_gacha1520.png" alt="banner_gacha1520"><br>dream_festival_3</td>
       <td><img src="./public/assets/036_dream_festival_3_ur.png" alt="036_dream_festival_3_ur"><br><span lang="ja">迷い星、ひとつ</span></td>
       <td><img src="./public/assets/037_dream_festival_3_ur.png" alt="037_dream_festival_3_ur"><br><span lang="ja">目覚めのあくびタイム</span></td>
       <td><img src="./public/assets/038_dream_festival_3_ur.png" alt="038_dream_festival_3_ur"><br><span lang="ja">帰り道、雪舞う中で</span></td>
@@ -196,7 +196,7 @@
       <td><img src="./public/assets/040_dream_festival_3_ur.png" alt="040_dream_festival_3_ur"><br><span lang="ja">カウンター越しの君</span></td>
     </tr>
     <tr>
-      <td>collabo_a</td>
+      <td><img src="./public/assets/banner_gacha1567.png" alt="banner_gacha1567"><br>collabo_a</td>
       <td><img src="./public/assets/036_collabo_a_ur.png" alt="036_collabo_a_ur"><br><span lang="ja">見上げた視線の先は</span></td>
       <td><img src="./public/assets/037_collabo_a_ur.png" alt="037_collabo_a_ur"><br><span lang="ja">その先にある輝き</span></td>
       <td><img src="./public/assets/038_collabo_a_ur.png" alt="038_collabo_a_ur"><br><span lang="ja">今、この先</span></td>
@@ -204,7 +204,7 @@
       <td><img src="./public/assets/040_collabo_a_ur.png" alt="040_collabo_a_ur"><br><span lang="ja">進む先にある答え</span></td>
     </tr>
     <tr>
-      <td>collabo_d_3</td>
+      <td><img src="./public/assets/banner_gacha1261.png" alt="banner_gacha1261"><br>collabo_d_3</td>
       <td><img src="./public/assets/036_collabo_d_3_ur.png" alt="036_collabo_d_3_ur"><br><span lang="ja">のんびりダイアログ</span></td>
       <td></td>
       <td></td>
