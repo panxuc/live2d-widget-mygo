@@ -13,7 +13,7 @@
     "pixi.js": "^6.5.2"
   },
   "devDependencies": {
-    "@eslint/js": "^9.26.0",
+    "@eslint/js": "^9.28.0",
     "@fortawesome/fontawesome-free": "^6.2.0",
     "@types/html-minifier": "^4.0.5",
     "@types/node": "^22.15.3",
