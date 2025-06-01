@@ -18,7 +18,7 @@
     "@types/html-minifier": "^4.0.5",
     "@types/node": "^22.15.3",
     "cssnano": "^7.0.6",
-    "eslint": "^9.25.1",
+    "eslint": "^9.28.0",
     "html-minifier": "^4.0.0",
     "typescript": "~5.8.3",
     "vite": "^6.3.4"
