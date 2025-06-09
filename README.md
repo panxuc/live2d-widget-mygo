@@ -164,7 +164,7 @@
       <td><img src="./public/assets/040_live_event_277_ur.png" alt="040_live_event_277_ur"><br><span lang="ja">お待たせいたしました</span></td>
     </tr>
     <tr>
-      <td><img src="./public/assets/banner_event286.png" alt="banner_event277"><br>live_event_286</td>
+      <td><img src="./public/assets/banner_event286.png" alt="banner_event286"><br>live_event_286</td>
       <td><img src="./public/assets/036_live_event_286_ur.png" alt="036_live_event_286_ur"><br><span lang="ja">路地裏を抜けて</span></td>
       <td><img src="./public/assets/037_live_event_286_sr.png" alt="037_live_event_286_sr"><br><span lang="ja">探しに行っちゃう？</span></td>
       <td><img src="./public/assets/038_live_event_286_ur.png" alt="038_live_event_286_ur"><br><span lang="ja">あの日の縁側</span></td>
@@ -172,12 +172,20 @@
       <td><img src="./public/assets/040_live_event_286_r.png" alt="040_live_event_286_r"><br><span lang="ja">凛と立つ</span></td>
     </tr>
     <tr>
-      <td><img src="./public/assets/banner_event289.png" alt="banner_event277"><br>live_event_289</td>
+      <td><img src="./public/assets/banner_event289.png" alt="banner_event289"><br>live_event_289</td>
       <td><img src="./public/assets/036_live_event_289_ur.png" alt="036_live_event_289_ur"><br><span lang="ja">歓星の共鳴</span></td>
       <td></td>
       <td></td>
       <td><img src="./public/assets/039_live_event_289_ur.png" alt="039_live_event_289_ur"><br><span lang="ja">幕開け前のひととき</span></td>
       <td></td>
+    </tr>
+    <tr>
+      <td><img src="./public/assets/banner_event297.png" alt="banner_event297"><br>live_event_297</td>
+      <td><img src="./public/assets/036_live_event_297_ur.png" alt="036_live_event_286_ur"><br><span lang="ja">ああ、ひとしずくを</span></td>
+      <td><img src="./public/assets/037_live_event_297_sr.png" alt="037_live_event_286_sr"><br><span lang="ja">繋ぐアンカー</span></td>
+      <td><img src="./public/assets/038_live_event_297_sr.png" alt="038_live_event_286_ur"><br><span lang="ja">猫は今日とて</span></td>
+      <td><img src="./public/assets/039_live_event_297_ur.png" alt="039_live_event_286_ssr"><br><span lang="ja">ただ眩しくて</span></td>
+      <td><img src="./public/assets/040_live_event_297_ur.png" alt="040_live_event_286_r"><br><span lang="ja">まさかの関係</span></td>
     </tr>
     <tr>
       <td><img src="./public/assets/banner_gacha1330.png" alt="banner_gacha1330"><img src="./public/assets/banner_gacha1379.png" alt="banner_gacha1379"><img src="./public/assets/banner_gacha1391.png" alt="banner_gacha1391"><img src="./public/assets/banner_gacha1445.png" alt="banner_gacha1445"><img src="./public/assets/banner_gacha1517.png" alt="banner_gacha1517"><br>birthday_2024</td>
